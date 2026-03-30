@@ -3,6 +3,9 @@
 # - The load factor is the number of stored entries divided by the bucket count.
 # - This version does not automatically resize, so performance stays simple but can
 #   degrade if too many keys are inserted into the fixed bucket array.
+# Complexity:
+# - Time: put/get/remove average O(1), worst-case O(N) if all keys collide in one bucket.
+# - Space: O(N + B) where B is number of buckets; effectively O(N).
 class MyHashMap:
     # Simple HashMap implementation using separate chaining for collision handling.
     def __init__(self):
@@ -54,6 +57,9 @@ class MyHashMap:
 # - Open addressing strategies such as linear probing, quadratic probing, or double hashing.
 
 # dynamic resizing would involve:
+# Complexity with dynamic resizing:
+# - Time: amortized put O(1), get/remove average O(1); worst-case O(N) during resize.
+# - Space: O(N + B) where B is the bucket count; effectively O(N).
 class MyHashMap:
     def __init__(self, capacity=1009):
         self._size = capacity

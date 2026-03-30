@@ -1,3 +1,6 @@
+# Complexity:
+# - Time: get and put are O(1) average and worst-case due to hashmap lookup + linked list operations.
+# - Space: O(capacity) for stored cache entries and linked-list nodes.
 class ListNode:
     # Node type used by the doubly linked list inside LRUCache.
     def __init__(self, key: int = 0, value: int = 0):

@@ -1,3 +1,6 @@
+# Complexity:
+# - Time: add/remove/contains average O(1), worst-case O(N) if a bucket contains many keys.
+# - Space: O(N + B) where B is number of buckets; effectively O(N).
 class MyHashSet:
     # Simple HashSet implementation using bucket lists for collision handling.
     def __init__(self):
